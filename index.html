@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The Best Barbershop in Your City" />
     <meta name="keywords" content="BarberShop, Hair, Beard, Haicuts" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +25,7 @@
   </head>
   <body>
     <!-- Hero section -->
-    <section>
+    <section class="hero">
       <!-- Sidebar -->
       <div>
         <!-- Logo -->
@@ -146,7 +153,7 @@
               everyone who comes to us!
             </p>
             <button
-              class="book-service-button hero-control-buttons-drak"
+              class="book-service-button book-service-button-dark"
               type="button"
             >
               book a service
@@ -156,7 +163,7 @@
       </section>
 
       <!-- Service and prices section -->
-      <section id="prices">
+      <section id="prices" class="services-and-prices">
         <!-- Subtitle -->
         <div>
           <img src="./images/divider.svg" alt="-" />
@@ -205,7 +212,12 @@
           </ul>
         </div>
 
-        <button type="button">book a Service</button>
+        <button
+          type="button"
+          class="book-service-button book-service-button-light"
+        >
+          book a Service
+        </button>
       </section>
 
       <!-- Why us section -->
@@ -332,13 +344,24 @@
       </section>
 
       <!-- Contacts -->
-      <section id="contacts">
+      <section id="contacts" class="contacts">
         <h2 class="header header-light">Contacts</h2>
         <address>
           <span>Main Street, 7A Kyiv, 08132</span><br />
           <a href="tel:+380441111111">+38 044 111 11 11</a> <br />
           <a href="mailto:barbershop@email.com">barbershop@email.com</a>
         </address>
+        <div>
+          <div>
+            <img src="images/divider.svg" alt="-" />
+            <h3>working hours</h3>
+            <h3 class="subtitle subtitle-light">working hours</h3>
+          </div>
+          <p>
+            Daily from <time datetime="9:00AM">9:00 AM</time> till
+            <time datetime="22:00PM">22:00 PM</time>
+          </p>
+        </div>
       </section>
     </main>
 
@@ -349,12 +372,20 @@
         <img src="./images/divider.svg" alt="-" />
         <ul>
           <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener"
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener"
+              class="social-media-link"
               >Instagram</a
             >
           </li>
           <li>
-            <a href="https://youtube.com" target="_blank" rel="noopener"
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener"
+              class="social-media-link"
               >YouTube</a
             >
           </li>
