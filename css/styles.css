@@ -34,9 +34,29 @@ ul {
 
 /* Classes */
 
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: fixed;
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+
 .container {
   width: 1280px;
   margin: auto;
+}
+
+.divider-light {
+  fill: var(--gray-color);
+}
+
+.divider-dark {
+  fill: var(--black-color);
 }
 
 .social-media-link {
@@ -112,6 +132,7 @@ ul {
 .subtitle-container {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .subtitle {
@@ -144,29 +165,5 @@ ul {
 }
 
 .header-light {
-  color: var(--white-color);
-}
-
-.why-us-cards {
-  --card-width: 170px;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: calc(var(--card-width) * 2 + 30px);
-  column-gap: 30px;
-}
-
-.why-us-card {
-  flex-basis: var(--card-width);
-  height: 133px;
-  background-color: #f7f7f7;
-}
-
-.why-us-card-shifted {
-  margin-top: 30px;
-}
-
-.contacts {
-  /* TODO: replace with image background */
-  background-color: var(--black-color);
   color: var(--white-color);
 }

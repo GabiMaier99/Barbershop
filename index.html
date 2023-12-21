@@ -24,9 +24,16 @@
     <link rel="stylesheet" href="./css/hero-styles.css" />
     <link rel="stylesheet" href="./css/about-styles.css" />
     <link rel="stylesheet" href="./css/services-and-prices-styles.css" />
+    <link rel="stylesheet" href="./css/why-us-styles.css" />
+    <link rel="stylesheet" href="./css/barbers-styles.css" />
+    <link rel="stylesheet" href="./css/contact-styles.css" />
+
     <title>BarberShop</title>
   </head>
   <body>
+    <div class="modal is-hidden" data-modal>
+      <button data-modal-close>Close</button>
+    </div>
     <div class="container">
       <!-- Hero section -->
       <section class="hero">
@@ -60,69 +67,95 @@
                 >
               </li>
             </ul>
-            <svg width="60" height="1">
+            <svg width="60" height="1" class="divider-dark">
               <use href="./images/icons.svg#divider-barbershop"></use>
             </svg>
           </div>
         </div>
         <!-- Hero conteiner -->
         <div class="hero-container">
-          <!-- Header -->
-          <header class="hero-header">
-            <nav class="hero-navbar">
-              <ul class="hero-navbar-list">
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li>
-                  <a class="nav-link" href="#prices">Services and Prices</a>
-                </li>
-                <li><a class="nav-link" href="#barbers">Barbers</a></li>
-                <li><a class="nav-link" href="#contacts">Contacts</a></li>
-              </ul>
-            </nav>
-            <div class="hero-header-cta">
-              <address class="hero-header-adress">
-                <a class="address-phone-number" href="tel:+380441111111"
-                  >+38 044 111 11 11</a
+          <div class="hero-carousel">
+            <img
+              class="hero-carousel-item"
+              src="./images/hero-slaider.jpeg"
+              alt=""
+              data-carousel-item
+            />
+            <img
+              class="hero-carousel-item"
+              src="./images/hero-slider2.jpeg"
+              alt=""
+              data-carousel-item
+            />
+            <img
+              class="hero-carousel-item"
+              src="./images/hero-slider3.jpeg"
+              alt=""
+              data-carousel-item
+            />
+          </div>
+
+          <div class="hero-content-container">
+            <!-- Header -->
+            <header class="hero-header">
+              <nav class="hero-navbar">
+                <ul class="hero-navbar-list">
+                  <li><a class="nav-link" href="#about">About</a></li>
+                  <li>
+                    <a class="nav-link" href="#prices">Services and Prices</a>
+                  </li>
+                  <li><a class="nav-link" href="#barbers">Barbers</a></li>
+                  <li><a class="nav-link" href="#contacts">Contacts</a></li>
+                </ul>
+              </nav>
+              <div class="hero-header-cta">
+                <address class="hero-header-adress">
+                  <a class="address-phone-number" href="tel:+380441111111"
+                    >+38 044 111 11 11</a
+                  >
+                </address>
+                <button
+                  class="book-service-button book-service-button-light"
+                  type="button"
+                  data-modal-open
                 >
-              </address>
+                  book a Service
+                </button>
+              </div>
+            </header>
+            <!-- Title -->
+            <section class="hero-content">
+              <div class="subtitle-container">
+                <svg width="60" height="1" class="divider-light">
+                  <use href="./images/icons.svg#divider-barbershop"></use>
+                </svg>
+                <h3 class="subtitle subtitle-light">
+                  A hair salon for men in Kyiv
+                </h3>
+              </div>
+              <h1 class="hero-title">BarberShop</h1>
+              <p class="hero-description">
+                We are experts in trendy men's haircuts. <br />
+                We work quickly, carefully, and tastefully.
+              </p>
+            </section>
+            <!-- Control Buttons -->
+            <div class="hero-control-buttons">
               <button
-                class="book-service-button book-service-button-light"
+                class="hero-control-button hero-control-button-drak"
                 type="button"
+                onclick="onBack()"
               >
-                book a Service
+                Back
+              </button>
+              <button
+                class="hero-control-button hero-control-button-light"
+                type="button"
+                onclick="onNext()"
+              >
+                Next
               </button>
             </div>
-          </header>
-          <!-- Title -->
-          <section class="hero-content">
-            <div class="subtitle-container">
-              <svg width="60" height="1">
-                <use href="./images/icons.svg#divider-barbershop"></use>
-              </svg>
-              <h3 class="subtitle subtitle-light">
-                A hair salon for men in Kyiv
-              </h3>
-            </div>
-            <h1 class="hero-title">BarberShop</h1>
-            <p class="hero-description">
-              We are experts in trendy men's haircuts. <br />
-              We work quickly, carefully, and tastefully.
-            </p>
-          </section>
-          <!-- Control Buttons -->
-          <div class="hero-control-buttons">
-            <button
-              class="hero-control-button hero-control-button-drak"
-              type="button"
-            >
-              Back
-            </button>
-            <button
-              class="hero-control-button hero-control-button-light"
-              type="button"
-            >
-              Next
-            </button>
           </div>
         </div>
       </section>
@@ -148,7 +181,7 @@
           <!-- About content -->
           <div class="about-content">
             <div class="subtitle-container">
-              <svg width="60" height="1">
+              <svg width="60" height="1" class="divider-dark">
                 <use href="./images/icons.svg#divider-barbershop"></use>
               </svg>
               <h3 class="subtitle subtitle-dark">About</h3>
@@ -177,50 +210,60 @@
         <!-- Service and prices section -->
         <section id="prices" class="services-and-prices">
           <!-- Subtitle -->
-          <div>
-            <svg width="60" height="1">
+          <div class="subtitle-container">
+            <svg width="60" height="1" class="divider-light">
               <use href="./images/icons.svg#divider-barbershop"></use>
             </svg>
             <h3 class="subtitle subtitle-light">
               Spend time in the company of the best craftsmen
             </h3>
           </div>
-          <h2 class="header header-light">Services and Prices</h2>
+          <h2 class="header header-light services-header">
+            Services and Prices
+          </h2>
           <!-- Prices list -->
           <div class="services-price-lists">
-            <ul class="services-price-list-1">
-              <li>
+            <ul class="services-price-list-light services-price-list">
+              <li class="services-price-list-item">
                 <span>Men's Haircut</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 300 UAH</span>
               </li>
-              <li>
+              <li class="services-price-list-item">
                 <span>Beard Trim</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 200 UAH</span>
               </li>
-              <li>
+              <li class="services-price-list-item">
                 <span>Mustache Trim</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 200 UAH</span>
               </li>
-              <li>
+              <li class="services-price-list-item">
                 <span>Straight Razor Shave</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 200 UAH</span>
               </li>
             </ul>
-            <ul class="services-price-list-2">
-              <li>
+            <ul class="services-price-list-dark services-price-list">
+              <li class="services-price-list-item">
                 <span>Trainee Haircut</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 50 UAH</span>
               </li>
-              <li>
+              <li class="services-price-list-item">
                 <span>Buzz Cut</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 200 UAH</span>
               </li>
-              <li>
+              <li class="services-price-list-item">
                 <span>Kids Haircut (&lt;12 y.o.)</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 300 UAH</span>
               </li>
-              <li>
+              <li class="services-price-list-item">
                 <span>Gray Coverage</span>
+                <span class="services-price-list-divider"></span>
                 <span>from 200 UAH</span>
               </li>
             </ul>
@@ -228,36 +271,36 @@
 
           <button
             type="button"
-            class="book-service-button book-service-button-light"
+            class="book-service-button book-service-button-light services-book-button"
           >
             book a Service
           </button>
         </section>
 
         <!-- Why us section -->
-        <section>
+        <section class="why-us">
           <ul class="why-us-cards">
             <li class="why-us-card">
-              <h3>600 <sup>+</sup></h3>
-              <p>Satisfied Customers per Day</p>
+              <h3 class="why-us-card-title">600 <sup>+</sup></h3>
+              <p class="why-us-card-description">Satisfied Customers per Day</p>
             </li>
             <li class="why-us-card why-us-card-shifted">
-              <h3>50<sup>+</sup></h3>
-              <p>Excellent Service Awards</p>
+              <h3 class="why-us-card-title">50<sup>+</sup></h3>
+              <p class="why-us-card-description">Excellent Service Awards</p>
             </li>
             <li class="why-us-card">
-              <h3>20<sup>+</sup></h3>
-              <p>The Best Barbers of Kyiv</p>
+              <h3 class="why-us-card-title">20<sup>+</sup></h3>
+              <p class="why-us-card-description">The Best Barbers of Kyiv</p>
             </li>
             <li class="why-us-card why-us-card-shifted">
-              <h3>100<sup>+</sup></h3>
-              <p>Gifts for Regular Customers</p>
+              <h3 class="why-us-card-title">100<sup>+</sup></h3>
+              <p class="why-us-card-description">Gifts for Regular Customers</p>
             </li>
           </ul>
           <div>
             <!-- Subtitle -->
-            <div>
-              <svg width="60" height="1">
+            <div class="subtitle-container">
+              <svg width="60" height="1" class="divider-dark">
                 <use href="./images/icons.svg#divider-barbershop"></use>
               </svg>
               <h3 class="subtitle subtitle-dark">Old school</h3>
@@ -271,18 +314,18 @@
         </section>
 
         <!-- Our barbers section -->
-        <section id="barbers">
+        <section id="barbers" class="barbers">
           <!-- Subtitle -->
-          <div>
-            <svg width="60" height="1">
+          <div class="subtitle-container">
+            <svg width="60" height="1" class="divider-dark">
               <use href="./images/icons.svg#divider-barbershop"></use>
             </svg>
             <h3 class="subtitle subtitle-dark">
               for true connoisseurs of the atmosphere
             </h3>
           </div>
-          <h2 class="header header-dark">Our Barbers</h2>
-          <ul>
+          <h2 class="header header-dark barbers-header">Our Barbers</h2>
+          <ul class="barbers-list">
             <li>
               <img
                 src="./images/barbers-jhon.jpg"
@@ -290,8 +333,38 @@
                 width="370"
                 height="346"
               />
-              <h4>John Smith</h4>
-              <p>Extreme Barber</p>
+              <h4 class="barbers-list-item-title">John Smith</h4>
+              <p class="barbers-list-item-description">Extreme Barber</p>
+              <ul class="barbers-social-media-list">
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#instagram-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#twitter-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#facebook-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#linkedin-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <img
@@ -300,8 +373,38 @@
                 width="370"
                 height="346"
               />
-              <h4>Michele Doe</h4>
-              <p>Extreme Barber</p>
+              <h4 class="barbers-list-item-title">Michele Doe</h4>
+              <p class="barbers-list-item-description">Extreme Barber</p>
+              <ul class="barbers-social-media-list">
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#instagram-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#twitter-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#facebook-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#linkedin-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <img
@@ -310,8 +413,38 @@
                 width="370"
                 height="346"
               />
-              <h4>Alan Black</h4>
-              <p>Extreme Barber</p>
+              <h4 class="barbers-list-item-title">Alan Black</h4>
+              <p class="barbers-list-item-description">Extreme Barber</p>
+              <ul class="barbers-social-media-list">
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#instagram-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#twitter-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#facebook-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="barbers-social-media-icon">
+                    <svg width="20" height="20">
+                      <use href="./images/icons.svg#linkedin-barbershop"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -320,7 +453,7 @@
         <section>
           <!-- Subtitle -->
           <div>
-            <svg width="60" height="1">
+            <svg width="60" height="1" class="divider-dark">
               <use href="./images/icons.svg#divider-barbershop"></use>
             </svg>
             <h3 class="subtitle subtitle-dark">
@@ -367,13 +500,18 @@
         <section id="contacts" class="contacts">
           <h2 class="header header-light">Contacts</h2>
           <address>
-            <span>Main Street, 7A Kyiv, 08132</span><br />
+            <span class="contact-address">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#map-pin-barbershop"></use>
+              </svg>
+              Main Street, 7A Kyiv, 08132 </span
+            ><br />
             <a href="tel:+380441111111">+38 044 111 11 11</a> <br />
             <a href="mailto:barbershop@email.com">barbershop@email.com</a>
           </address>
           <div>
             <div>
-              <svg width="60" height="1">
+              <svg width="60" height="1" class="divider-light">
                 <use href="./images/icons.svg#divider-barbershop"></use>
               </svg>
               <h3>working hours</h3>
@@ -391,7 +529,7 @@
       <footer>
         <p>&copy;Copyright 2022</p>
         <div>
-          <svg width="60" height="1">
+          <svg width="60" height="1" class="divider-dark">
             <use href="./images/icons.svg#divider-barbershop"></use>
           </svg>
           <ul>
@@ -417,5 +555,6 @@
         </div>
       </footer>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>
