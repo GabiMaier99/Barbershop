@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./css/why-us-styles.css" />
     <link rel="stylesheet" href="./css/barbers-styles.css" />
     <link rel="stylesheet" href="./css/contact-styles.css" />
+    <link rel="stylesheet" href="./css/footer-styles.css" />
+    <link rel="stylesheet" href="./css/portfolio-styles.css" />
 
     <title>BarberShop</title>
   </head>
@@ -450,9 +452,9 @@
         </section>
 
         <!-- Portofolio -->
-        <section>
+        <section class="portfolio">
           <!-- Subtitle -->
-          <div>
+          <div class="subtitle-container portfolio-subtitle-container">
             <svg width="60" height="1" class="divider-dark">
               <use href="./images/icons.svg#divider-barbershop"></use>
             </svg>
@@ -460,7 +462,7 @@
               In Latin, &quot;barba&quot; means &quot;beard&quot;
             </h3>
           </div>
-          <ul>
+          <ul class="portfolio-images">
             <li>
               <img
                 src="./images/barber-one.jpg"
@@ -496,37 +498,57 @@
           </ul>
         </section>
 
-        <!-- Contacts -->
-        <section id="contacts" class="contacts">
-          <h2 class="header header-light">Contacts</h2>
-          <address>
-            <span class="contact-address">
-              <svg width="24" height="24">
-                <use href="./images/icons.svg#map-pin-barbershop"></use>
-              </svg>
-              Main Street, 7A Kyiv, 08132 </span
-            ><br />
-            <a href="tel:+380441111111">+38 044 111 11 11</a> <br />
-            <a href="mailto:barbershop@email.com">barbershop@email.com</a>
-          </address>
-          <div>
+        <div class="contact-container">
+          <!-- Book-Service -->
+
+          <section class="contact-book-service"></section>
+
+          <!-- Contacts -->
+          <section id="contacts" class="contacts">
+            <h2 class="header header-light">Contacts</h2>
+            <address>
+              <span class="contact-address">
+                <svg class="contact-icon" width="24" height="24">
+                  <use href="./images/icons.svg#map-pin-barbershop"></use>
+                </svg>
+                Main Street, 7A Kyiv, 08132 </span
+              ><br />
+              <a class="contact-address" href="tel:+380441111111">
+                <svg class="contact-icon" width="24" height="24">
+                  <use href="./images/icons.svg#phone-barbershop"></use>
+                </svg>
+                +38 044 111 11 11</a
+              >
+              <br />
+              <a
+                class="contact-address contact-address-email"
+                href="mailto:barbershop@email.com"
+              >
+                <svg class="contact-icon" width="24" height="24">
+                  <use href="./images/icons.svg#mail-barbershop"></use>
+                </svg>
+                barbershop@email.com</a
+              >
+            </address>
             <div>
-              <svg width="60" height="1" class="divider-light">
-                <use href="./images/icons.svg#divider-barbershop"></use>
-              </svg>
-              <h3>working hours</h3>
-              <h3 class="subtitle subtitle-light">working hours</h3>
+              <div>
+                <svg width="60" height="1" class="divider-light">
+                  <use href="./images/icons.svg#divider-barbershop"></use>
+                </svg>
+                <h3>working hours</h3>
+                <h3 class="subtitle subtitle-light">working hours</h3>
+              </div>
+              <p class="contact-working-hour">
+                Daily from <time datetime="9:00AM">9:00 AM</time> till
+                <time datetime="22:00PM">22:00 PM</time>
+              </p>
             </div>
-            <p>
-              Daily from <time datetime="9:00AM">9:00 AM</time> till
-              <time datetime="22:00PM">22:00 PM</time>
-            </p>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <!-- Footer -->
-      <footer>
+      <footer class="footer">
         <p>&copy;Copyright 2022</p>
         <div>
           <svg width="60" height="1" class="divider-dark">
