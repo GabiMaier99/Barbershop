@@ -1,10 +1,13 @@
 .portfolio {
-  padding: 130px 155px;
+  padding: var(--padding-vertical-global) var(--padding-horizontal-global);
 }
 
 .portfolio-images {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .portfolio-subtitle-container {
