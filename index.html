@@ -166,19 +166,18 @@
         <!-- About section -->
         <section id="about" class="about">
           <!-- About images -->
-
-          <img
-            src="./images/about-img-1.jpg"
-            alt="Barber trims beard"
-            width="270"
-            height="445"
-          />
-          <img
-            src="./images/about-img- 2.jpg"
-            alt="Barber cuts hair"
-            width="270"
-            height="445"
-          />
+          <div class="about-images-container">
+            <img
+              src="./images/about-img-1.jpg"
+              alt="Barber trims beard"
+              class="about-image"
+            />
+            <img
+              src="./images/about-img- 2.jpg"
+              alt="Barber cuts hair"
+              class="about-image"
+            />
+          </div>
 
           <!-- About content -->
           <div class="about-content">
@@ -299,7 +298,7 @@
               <p class="why-us-card-description">Gifts for Regular Customers</p>
             </li>
           </ul>
-          <div>
+          <div class="why-us-title-container">
             <!-- Subtitle -->
             <div class="subtitle-container">
               <svg width="60" height="1" class="divider-dark">
@@ -328,7 +327,7 @@
           </div>
           <h2 class="header header-dark barbers-header">Our Barbers</h2>
           <ul class="barbers-list">
-            <li>
+            <li class="barbers-list-item">
               <img
                 src="./images/barbers-jhon.jpg"
                 alt="Jhon Smith"
@@ -368,7 +367,7 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="barbers-list-item">
               <img
                 src="./images/barbers-michele.jpg"
                 alt="Michele Doe"
@@ -408,7 +407,7 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="barbers-list-item">
               <img
                 src="./images/barbers-alan.jpg"
                 alt="Alan Black"
@@ -502,7 +501,7 @@
           <!-- Book-Service -->
 
           <section class="contact-book-service">
-            <h2 class="header header-light">Book a Service</h2>
+            <h2 class="header header-light contact-header">Book a Service</h2>
             <form action="" autocomplete="off" class="contact-form">
               <div class="contact-form-input-group">
                 <input
@@ -528,7 +527,7 @@
                 class="contact-form-element contact-form-elem-textarea"
               ></textarea>
               <button
-                class="book-service-button book-service-button-light"
+                class="book-service-button book-service-button-light contact-submit-button"
                 type="submit"
               >
                 send
@@ -538,42 +537,44 @@
 
           <!-- Contacts -->
           <section id="contacts" class="contacts">
-            <h2 class="header header-light">Contacts</h2>
-            <address>
-              <span class="contact-address">
-                <svg class="contact-icon" width="24" height="24">
-                  <use href="./images/icons.svg#map-pin-barbershop"></use>
-                </svg>
-                Main Street, 7A Kyiv, 08132 </span
-              ><br />
-              <a class="contact-address" href="tel:+380441111111">
-                <svg class="contact-icon" width="24" height="24">
-                  <use href="./images/icons.svg#phone-barbershop"></use>
-                </svg>
-                +38 044 111 11 11</a
-              >
-              <br />
-              <a
-                class="contact-address contact-address-email"
-                href="mailto:barbershop@email.com"
-              >
-                <svg class="contact-icon" width="24" height="24">
-                  <use href="./images/icons.svg#mail-barbershop"></use>
-                </svg>
-                barbershop@email.com</a
-              >
-            </address>
-            <div>
-              <div class="subtitle-container">
-                <svg width="60" height="1" class="divider-light">
-                  <use href="./images/icons.svg#divider-barbershop"></use>
-                </svg>
-                <h3 class="subtitle subtitle-light">working hours</h3>
+            <h2 class="header header-light contact-header">Contacts</h2>
+            <div class="contacts-information-container">
+              <address>
+                <span class="contact-address">
+                  <svg class="contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#map-pin-barbershop"></use>
+                  </svg>
+                  Main Street, 7A Kyiv, 08132 </span
+                ><br />
+                <a class="contact-address" href="tel:+380441111111">
+                  <svg class="contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#phone-barbershop"></use>
+                  </svg>
+                  +38 044 111 11 11</a
+                >
+                <br />
+                <a
+                  class="contact-address contact-address-email"
+                  href="mailto:barbershop@email.com"
+                >
+                  <svg class="contact-icon" width="24" height="24">
+                    <use href="./images/icons.svg#mail-barbershop"></use>
+                  </svg>
+                  barbershop@email.com</a
+                >
+              </address>
+              <div>
+                <div class="subtitle-container">
+                  <svg width="60" height="1" class="divider-light">
+                    <use href="./images/icons.svg#divider-barbershop"></use>
+                  </svg>
+                  <h3 class="subtitle subtitle-light">working hours</h3>
+                </div>
+                <p class="contact-working-hour">
+                  Daily from <time datetime="9:00AM">9:00 AM</time> till
+                  <time datetime="22:00PM">22:00 PM</time>
+                </p>
               </div>
-              <p class="contact-working-hour">
-                Daily from <time datetime="9:00AM">9:00 AM</time> till
-                <time datetime="22:00PM">22:00 PM</time>
-              </p>
             </div>
           </section>
         </div>
