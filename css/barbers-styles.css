@@ -68,6 +68,6 @@
 @media screen and (width >= 1158px) {
   .barbers-list {
     flex-direction: row;
-    gap: 64px;
+    gap: 30px;
   }
 }
